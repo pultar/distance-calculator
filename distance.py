@@ -25,18 +25,22 @@ def distance_naive(atom_1, atom_2):
     )
     return distance
 
-def distance_pygromos(conf, atom_1, atom_2):
+def distance_pygromos(conf, atom_1, atom_2, idx=0):
     """Distance calculation with PyGromosTools functionality
 
     Args:
         conf (Cnf): configuration object from PyGromosTools
-        atom_1 (int): index atom_1 (1-based)
-        atom_2 (int): index atom_2 (1-based)
+        atom_1 (int): index atom_1
+        atom_2 (int): index atom_2
+        idx (int): idx is 0 based or 1 based
 
     Returns:
         Distance calculated
     """
-    distance = conf.get_atoms_distance(atom_1, atom_2)
+    if (idx == 0):
+        atom_1 += 1
+        atom_2 += 1
+    distance = conf.get_atoms_distance(atom_1, atom_2) 
     return distance
 
 def distance_numpy(atom_1, atom_2):
@@ -70,7 +74,7 @@ if __name__ == "__main__":
     coord = my_configuration.get_atom_coordinates()
     distance = 0.0
     if (method == "pygromos"):
-        distance = distance_pygromos(my_configuration, atom_1 + 1, atom_2 + 1)
+        distance = distance_pygromos(my_configuration, atom_1, atom_2, idx=0)
     elif (method == "naive"):
         distance = distance_naive(coord[atom_1], coord[atom_2])
     elif (method == "numpy"):
