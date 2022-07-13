@@ -1,6 +1,6 @@
 from pygromos.files.coord.cnf import Cnf
-from distance import distance_numpy as calc_dist_1
-from distance import distance_pygromos as calc_dist_2
+from gdist import distance_numpy as calc_dist_1
+from gdist import distance_pygromos as calc_dist_2
 
 import numpy as np
 
@@ -13,7 +13,7 @@ print(array_2)
 distance_1 = calc_dist_1(array_1, array_2)
 print(f"Distance calculated from random arrays: {distance_1}")
 
-my_configuration = Cnf("examples/menthol.cnf")
+my_configuration = Cnf("menthol.cnf")
 coord = my_configuration.get_atom_coordinates()
 
 # indices can start from 0 and 1, a switch is only supported within PyGromosTools

@@ -1,7 +1,7 @@
 import pytest
 import numpy as np
 
-from distance import distance_naive, distance_numpy, distance_pygromos
+from gdist import distance_naive, distance_numpy, distance_pygromos
 from pygromos.files.coord.cnf import Cnf
 
 ACCURACY = 10 ** -7
