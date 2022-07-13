@@ -11,7 +11,7 @@ EXAMPLE_FILE = "examples/menthol.cnf"
 DISTANCES_REF = [
   0.10900251779675933, # atom 0 -> atom 1
   3.008038939682372,   # atom 0 -> atom 20
-  2.9829131968815035.  # atom 20 -> atom 30
+  2.9829131968815035   # atom 20 -> atom 30
 ]
 
 TEST_DISTANCES_BY_ATOM = [
