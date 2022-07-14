@@ -9,4 +9,4 @@ Tests make sure that distances are actually computed correctly, especially when 
 
 # Installation
 
-Make sure to have `PyGromosTools` installed (https://github.com/rinikerlab/PyGromosTools). Then run `python -m pip -e .` in the root directory of this repo. To execute tests, run `make test`.
+Make sure to have `PyGromosTools` installed (https://github.com/rinikerlab/PyGromosTools). Then run `python -m pip install -e .` in the root directory of this repo. To execute tests, run `make test`.
